@@ -13,6 +13,6 @@ The website will be similar to my resume, containing the following:
 ## Technologies
 The technologies I'm using for this project are the following:
 - Node.js
-- Next.js
+- React with Next.js
 - TypeScript
 - Sass
