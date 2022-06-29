@@ -1,9 +1,15 @@
+//NextJs
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link'
+
+//React Components
+import NavBar from './navbar'
+import Logo from "./Logo";
+
+//CSS
 import styles from './layout.module.scss';
 import utilStyles from '../styles/utils.module.scss'
-import Link from 'next/link'
-import NavBar from './navbar'
 
 const name = "Patrick Morin - Software developer";
 export const siteTitle = 'Nextjs Sample Website';
@@ -17,7 +23,7 @@ export default function Layout({ children, home }: LayoutProps){
   return (
     <>
       <Head>
-        <link rel="icon" href="/favicon.ico"/>
+        <link rel="icon" href="/images/profile2.png"/>
         <meta
           name="Description"
           content="Patrick Morin's website"
@@ -37,7 +43,7 @@ export default function Layout({ children, home }: LayoutProps){
               <a>
                 <Image
                   priority
-                  src="/images/profile.jpg"
+                  src="/images/profile2.png"
                   className={utilStyles.borderCircle}
                   height={108}
                   width={108}
@@ -50,6 +56,10 @@ export default function Layout({ children, home }: LayoutProps){
                 <a className={utilStyles.colorInherit}>{name}</a>
               </Link>
             </h2>
+            <div>
+              <Logo src="/images/LinkedIn-Logo.png" url="https://www.linkedin.com/in/patrick-morin-5209b719a/" name="LinkedIn Profil" size={30}/>
+              <Logo src="/images/GitHub-Logo.png" url="https://github.com/Valektrum" name="GitHub Profil" size={30}/>
+            </div>
           </>
       </header>
       <NavBar/>
