@@ -15,4 +15,4 @@ The technologies I'm using for this project are the following:
 - Node.js
 - Next.js
 - TypeScript
-- SCSS
+- Sass
