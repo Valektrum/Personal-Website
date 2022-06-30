@@ -15,8 +15,8 @@ export default function Logo(props: LogoProps){
   return(
     <div className={styles.logo}>
       <a href={props.url} target="_blank">
-        <Image
-          priority
+        <img
+          className="svg"
           src={props.src}
           height={props.size}
           width={props.size}
