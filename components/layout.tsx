@@ -5,7 +5,6 @@ import Link from "next/link";
 
 //React Components
 import NavBar from "./navbar";
-import Logo from "./logo";
 
 //CSS
 import styles from "./layout.module.scss";
@@ -89,19 +88,6 @@ export default function Layout({ children, home }: LayoutProps) {
               </a>
             </div>
           </div>
-
-          {/* <Logo
-              src="/images/Logo-LinkedIn.svg"
-              url="https://www.linkedin.com/in/patrick-morin-5209b719a/"
-              name="LinkedIn Profil"
-              size={30}
-            />
-            <Logo
-              src="/images/Logo-GitHub.svg"
-              url="https://github.com/Valektrum"
-              name="GitHub Profil"
-              size={30}
-            /> */}
         </>
       </header>
       <NavBar />
