@@ -4,7 +4,12 @@ import React, { createContext, useContext, useEffect, useState } from "react";
 import Layout from "../components/layout";
 import Card from "../components/card";
 
-const projects = [
+const projects: {
+  title: string;
+  description: string;
+  text: string;
+  technologies: { name: string; src: string }[];
+}[] = [
   {
     title: "Website",
     description: "Personal website",
@@ -64,7 +69,7 @@ const projects = [
   },
 ];
 
-export default function FirstPost() {
+export default function Page() {
   return (
     <Layout home={false}>
       <Head>
@@ -75,12 +80,13 @@ export default function FirstPost() {
         This is my first page! Aint that cool? What should I be making? A
         personal website? A food blog? IDK I'm just messing around I guess.
       </p>
-      {projects.map((project, key) => (
+      {projects.map((project, i) => (
         <Card
           title={project.title}
           description={project.description}
           text={project.text}
           technologies={project.technologies}
+          key={i}
         />
       ))}
     </Layout>
